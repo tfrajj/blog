@@ -25,3 +25,6 @@
 ###< php-cs-fixer/shim ###
 
 .vscode/
+###> symfonycasts/sass-bundle ###
+/public/assets/
+###< symfonycasts/sass-bundle ###
