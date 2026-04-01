@@ -7,6 +7,8 @@ $border-color: #222222;
 $font-family: 'Ubuntu Mono', monospace;
 
 $content-width: 960px;
+$bp-tablet: 600px;
+$bp-desktop: 960px;
 
 
 body {
@@ -81,4 +83,38 @@ footer {
 .container {
     max-width: $content-width;
     margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.content {
+    padding-bottom: 4rem; // clearance for fixed footer
+}
+
+// -------------------------
+// Responsive.
+// -------------------------
+
+// Tablet & up: restore horizontal container padding
+@media (min-width: $bp-desktop) {
+    .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+// Mobile: stack header columns vertically
+@media (max-width: #{$bp-tablet - 1}) {
+    .header {
+        .container {
+            flex-direction: column;
+            height: auto;
+            padding: .6rem 1rem;
+            gap: .4rem;
+        }
+
+        h1 {
+            font-size: 1rem;
+        }
+    }
 }
