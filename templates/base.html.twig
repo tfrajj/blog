@@ -18,35 +18,39 @@
 	</head>
 	<body>
 		<div class="header">
-			<div class="header-left">
-				<nav>
+			<div class="container">
+				<div class="header-left">
+					<nav>
+						<ul>
+							<li><a href="/" class="active">Home</a></li>
+							<li><a href="#">Contact</a></li>
+						</ul>
+					</nav>
+				</div>
+
+				<div class="header-center">
+					<h1>The Blog</h1>
+				</div>
+
+				<div class="header-right">
 					<ul>
-						<li><a href="/" class="active">Home</a></li>
-						<li><a href="#">Contact</a></li>
+						<li><a href="#">UA</a></li>
+						<li><a href="#" class="active">EN</a></li>
 					</ul>
-				</nav>
-			</div>
-
-			<div class="header-center">
-				<h1>The Blog</h1>
-			</div>
-
-			<div class="header-right">
-				<ul>
-					<li><a href="#">UA</a></li>
-					<li><a href="#" class="active">EN</a></li>
-				</ul>
+				</div>
 			</div>
 		</div>
 		
-<hr class="header-divider"/>
-
-		<div class="content">
+		<div class="content container">
 			{% block body %}{% endblock %}
+
+			<p>Lorem ipsum dolor sit amet <span class="accent">consectetur adipisicing elit.</span> Quisquam, quod.</p>
 		</div>
 
-			<footer>
+		<footer>
+			<div class="container">
 				<p>Footer</p>
-			</footer>
-		</body>
-	</html>
+			</div>
+		</footer>
+	</body>
+</html>

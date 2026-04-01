@@ -1,5 +1,84 @@
-$background-color: #6d8f2e;
+$main-color: #F3E8DF;
+$secondary-color: #296374;
+$text-color: #3E2C23;
+$accent-color: #9E3B3B;
+$border-color: #222222;
+
+$font-family: 'Ubuntu Mono', monospace;
+
+$content-width: 960px;
+
 
 body {
-    background-color: $background-color;
+    background-color: $main-color;
+    color: $text-color;
+    font-family: $font-family;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: $secondary-color;
+    color: $main-color;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: .4rem .8rem;
+        height: 3rem;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+        margin: 0;
+    }
+
+    ul {
+        list-style: none;
+        display: flex;
+        gap: .8rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        color: $main-color;
+        text-decoration: none;
+
+        &:hover {
+            color: $accent-color;
+        }
+    }
+
+    .active {
+        color: $border-color;
+    }
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $border-color;
+    color: $main-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+// -------------------------
+// Utility classes.
+// -------------------------
+.accent {
+    color: $accent-color;
+}
+
+.container {
+    max-width: $content-width;
+    margin: 0 auto;
 }
