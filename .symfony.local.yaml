@@ -1,0 +1,3 @@
+workers:
+    scss:
+        cmd: ["symfony", "console", "sass:build", "--watch"]
